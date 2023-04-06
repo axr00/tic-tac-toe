@@ -1,0 +1,17 @@
+{# @author axr 2023 | @version 1.0 | @description index.html.twig partial form for /home #}
+
+{{ form_start(player_form, {method: 'POST', action: path('app_home_create')}) }}
+    <div class="col-12 mt-4 d-flex justify-content-center">
+        {{ form_label(player_form.name, 'Playername', {'label_attr': {'class': 'form-label'}}) }}
+    </div>
+    <div class="col-12 d-flex justify-content-center">
+        {{ form_row(player_form.name, {'attr':{'class':'form-control', 'value': ''}} ) }}
+    </div>
+    <div class="col-12 d-flex justify-content-center align-items-center">
+        {{ form_row(player_form.submit, { 
+            'label': 'Start Game', 
+            'attr': {'class': 'btn btn-outline-light mt-3'} 
+        })}}
+    </div>
+{{ form_end(player_form) }}
+

@@ -1,0 +1,33 @@
+{# @author axr 2023 | @version 1.0 | @description base.html.twig as ROOT for /home #}
+
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+        <meta name="author" content="axr00">
+
+        {% block title %}
+            <title>Tic Tac Toe | Home</title>
+        {% endblock %}
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block body %}
+            {% block header %}{% endblock %}
+            {% block content %}
+                {% block content_form %}{% endblock %}
+            {% endblock %}
+            {% block footer %}{% endblock %}
+        {% endblock %}
+    </body>
+</html>
