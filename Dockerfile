@@ -8,7 +8,10 @@ ARG PHP_VERSION=8.0
 ARG CADDY_VERSION=2
 
 # "php" stage
-FROM php:${PHP_VERSION}-fpm-alpine3.13 AS symfony_php
+# FROM php:${PHP_VERSION}-fpm-alpine3.13 AS symfony_php
+
+# axr00: adjusted php version(host) to handle twig etc.
+FROM php:8.1.2-fpm-alpine3.15 AS symfony_php
 
 # persistent / runtime deps
 RUN apk add --no-cache \
