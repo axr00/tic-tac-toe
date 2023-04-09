@@ -107,7 +107,7 @@ export default class Board {
 
             var nextFreeIndex = [];
 
-            /* minimax algo first initial round (maximizing) */
+            /* minimax algo first initial round (minimizing) */
             let newMove = -Infinity;
             let turn;
             for(let i = 0; i < this.tiles.length; i++) {
@@ -344,8 +344,6 @@ export default class Board {
                 if (val[i].symbol == 'E') {
                     let slot = val[i].symbol;
                     storage.push(slot);
-                    //console.log("spaces-full: " + storage);  
-                    //console.log("spaces-length: " + storage.length);
                 }
             }
         });
@@ -353,7 +351,7 @@ export default class Board {
     }
 
 /**
-* disable/enable cancas tiles with css
+* disable/enable canvas tiles with css
 */
     disableTiles(isDisabled) {
         let rects = document.querySelectorAll('.canvas-tile');
