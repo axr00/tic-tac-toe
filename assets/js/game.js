@@ -43,7 +43,7 @@ export default class Game {
             if (Game.getGameState() != 1 && Game.getGameState() != 2) {
                 this.board.forceTurnAI(this.player2, this.player2.mode)
                 .then( () => { this.prepareGame();})
-                //.catch( () => { console.log(new Error('error forceTurnAI()- promise')); });
+                .catch( () => { console.log(new Error('error forceTurnAI()- promise')); });
             }
         })
         //.catch( () => { console.log(new Error('error forceTurnHuman() - promise')); });
